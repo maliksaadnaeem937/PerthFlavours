@@ -97,36 +97,45 @@ export default function Contact() {
             className="mt-4 flex flex-col space-y-4"
             name="contact"
             method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit="submit"
-           
+            data-netlify="true" // Enables Netlify form handling
+            data-netlify-honeypot="bot-field" // Adds a hidden honeypot field for bot protection
+            netlify
           >
-            <input type="text" className="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="text" name="bot-field" className="hidden" />
+
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
               className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-indigo-400"
               required
             />
+
             <input
               type="email"
+              name="email"
               placeholder="Your Email"
               className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-indigo-400"
               required
             />
+
             <input
               type="tel"
+              name="phone"
               placeholder="Your Phone Number"
               className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-indigo-400"
               required
             />
+
             <textarea
+              name="message"
               placeholder="Your Message"
               className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-indigo-400"
               rows="4"
               required
             ></textarea>
+
             <button
               type="submit"
               className="px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:from-indigo-500 hover:to-blue-500 transition duration-200"
