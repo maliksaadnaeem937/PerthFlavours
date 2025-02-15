@@ -20,7 +20,7 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="pricing" element={<Pricing />} />
       <Route path="opening-hours" element={<OpeningHours />} />
-      <Route path="form-success" element={<Modal />} />
+      <Route path="success" element={<Modal />} />
       <Route path="*" element={<div className="text-4xl font-bold text-center">Not Found!</div>} />
     </Route>
   )
