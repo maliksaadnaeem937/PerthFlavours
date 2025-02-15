@@ -8,10 +8,10 @@ export default function Welcome() {
       style={{ height: "calc(100vh - 70px)" }}
     >
       {/* Dark overlay for better readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-      <div className="relative max-w-3xl bg-[#FF8C42] p-6 sm:p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl sm:text-4xl font-semibold mb-3">
+      <div className="relative max-w-3xl bg-red-600 p-6 sm:p-8 rounded-lg shadow-lg">
+        <h2 className="text-2xl sm:text-4xl font-semibold text-yellow-300 mb-3">
           <Typewriter
             words={["Welcome to PERTH FLAVOURS"]}
             loop={false}
@@ -23,7 +23,7 @@ export default function Welcome() {
           />
         </h2>
 
-        <h2 className="text-2xl sm:text-4xl font-semibold mb-5">
+        <h2 className="text-2xl sm:text-4xl font-semibold text-yellow-300 mb-5">
           <Typewriter
             words={["The Tasty House"]}
             loop={false}
@@ -35,11 +35,11 @@ export default function Welcome() {
           />
         </h2>
 
-        <h3 className="text-xl text-gray-300 mb-7">PERTH FLAVOURS</h3>
+        <h3 className="text-xl text-white mb-7 font-light">PERTH FLAVOURS</h3>
 
         {/* Clickable phone number */}
         <a href="tel:01416113130">
-          <button className="bg-red-600 text-white font-semibold rounded-lg px-6 py-3 text-lg hover:bg-red-700 transition duration-300">
+          <button className="bg-yellow-500 text-white font-semibold rounded-lg px-6 py-3 text-lg hover:bg-yellow-600 transition duration-300">
             📞 0141 611 3130
           </button>
         </a>

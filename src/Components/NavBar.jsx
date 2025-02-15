@@ -14,12 +14,18 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="	bg-[#C8102E] text-white shadow-lg fixed left-0 top-0 right-0 z-50 py-3">
+      <nav className="bg-gradient-to-r from-[#FF5722] to-[#FF9800] text-white shadow-lg fixed left-0 top-0 right-0 z-50 py-3">
         <div className="flex w-full py-2 px-4 justify-between items-center">
+          {/* Logo */}
           <NavLink to="." end>
-            <h4 className="text-2xl md:text-3xl">PERTH FLAVOURS</h4>
+            <div className="flex items-center gap-2">
+              {/* You can replace this emoji with an image if you want */}
+              <span className="text-3xl">🍔</span>
+              
+            </div>
           </NavLink>
 
+          {/* Navbar Links for Desktop */}
           <div className="hidden md:flex gap-6 text-sm md:text-base">
             <NavLink
               to="."
@@ -68,6 +74,7 @@ export default function NavBar() {
             </NavLink>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-xl"
             onClick={toggle}
@@ -77,8 +84,9 @@ export default function NavBar() {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-[#C8102E] text-white transform transition-transform duration-300 ease-in-out ${
+          className={`fixed inset-0 bg-gradient-to-r from-[#FF5722] to-[#FF9800] text-white transform transition-transform duration-300 ease-in-out ${
             display ? "translate-y-0" : "-translate-y-full"
           } md:hidden flex flex-col items-center py-4 gap-4`}
         >
@@ -136,14 +144,10 @@ export default function NavBar() {
           </NavLink>
         </div>
       </nav>
-      <div>
 
-      </div>
-    
-
-      {/* Add padding to prevent content from being covered by the navbar */}
       <div className="">
-        <Container >
+        {/* Add padding to prevent content from being covered by the navbar */}
+        <Container>
           <Outlet />
         </Container>
         <Footer />

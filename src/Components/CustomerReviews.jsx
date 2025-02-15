@@ -70,7 +70,7 @@ export default function CustomerReviews() {
   };
 
   return (
-    <div className="max-w-[100%] bg-[#1F1F1F] py-12">
+    <div className="max-w-[100%] bg-[#F4F4F4] py-12">
       <div className="max-w-6xl mx-auto px-6 py-10 bg-[#FF8C42] text-white rounded-lg shadow-xl">
         <h2 className="text-center text-3xl font-bold text-[#FFD700] mb-8">
           What Our Customers Say
@@ -82,7 +82,7 @@ export default function CustomerReviews() {
                 <img
                   src={review.image}
                   alt={review.name}
-                  className="w-20 h-20 mx-auto rounded-full object-cover border-4 border-[#A52A2A]"
+                  className="w-20 h-20 mx-auto rounded-full object-cover border-4 border-[#FF8C42]"
                 />
                 <h3 className="text-lg font-semibold mt-3 text-[#FF8C42]">
                   {review.name}

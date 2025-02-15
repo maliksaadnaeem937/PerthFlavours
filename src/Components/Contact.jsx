@@ -12,7 +12,7 @@ export default function Contact() {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <div className="min-h-screen flex p-2 items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 sm:p-6">
+    <div className="min-h-screen flex p-2 items-center justify-center bg-gradient-to-br from-yellow-400 via-red-500 to-pink-600 sm:p-6">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,9 +24,9 @@ export default function Contact() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="text-4xl font-bold text-center text-indigo-300"
+          className="text-4xl font-bold text-center text-yellow-300"
         >
-          📞 Contact Us
+          🍔 Contact Us
         </motion.h2>
 
         {/* Contact Details */}
@@ -36,18 +36,18 @@ export default function Contact() {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="mt-6 p-6 bg-gray-900 bg-opacity-70 rounded-lg shadow-md "
         >
-          <h3 className="text-2xl font-semibold text-indigo-300 text-center">
-            Get In Touch
+          <h3 className="text-2xl font-semibold text-yellow-300 text-center">
+            Get In Touch With Us!
           </h3>
           <p className="text-gray-300 text-center">
-            We are here to assist you!
+            We're here to make your experience delicious!
           </p>
 
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Address Section */}
             <div className="flex flex-col items-center">
-              <FaMapMarkerAlt className="text-indigo-400 text-4xl" />
-              <p className="font-semibold text-indigo-400 mt-2">📍 Address:</p>
+              <FaMapMarkerAlt className="text-yellow-400 text-4xl" />
+              <p className="font-semibold text-yellow-400 mt-2">📍 Address:</p>
               <p className="text-gray-300 text-center">
                 Stirling Arcade, Stirling, FK8 1AX
               </p>
@@ -55,8 +55,8 @@ export default function Contact() {
 
             {/* Phone Section */}
             <div className="flex flex-col items-center">
-              <FaPhone className="text-indigo-400 text-4xl" />
-              <p className="font-semibold text-indigo-400 mt-2">📞 Phone:</p>
+              <FaPhone className="text-yellow-400 text-4xl" />
+              <p className="font-semibold text-yellow-400 mt-2">📞 Phone:</p>
               <p className="text-gray-300 text-center">
                 <a
                   href="tel:+441416113130"
@@ -69,8 +69,8 @@ export default function Contact() {
 
             {/* Email Section */}
             <div className="flex flex-col items-center">
-              <FaEnvelope className="text-indigo-400 text-4xl" />
-              <p className="font-semibold text-indigo-400 mt-2">📧 Email:</p>
+              <FaEnvelope className="text-yellow-400 text-4xl" />
+              <p className="font-semibold text-yellow-400 mt-2">📧 Email:</p>
               <p className="text-gray-300 text-center">
                 <a
                   href="mailto:clearbusinessbyadrian@gmail.com"
@@ -88,10 +88,10 @@ export default function Contact() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="mt-6 p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-md border border-indigo-500"
+          className="mt-6 p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-md border border-yellow-500"
         >
-          <h3 className="text-2xl font-semibold text-indigo-300 text-center">
-            Send Us a Message
+          <h3 className="text-2xl font-semibold text-yellow-300 text-center">
+            Send Us a Message 🍟
           </h3>
           <form
             className="mt-4 flex flex-col space-y-4"
@@ -108,7 +108,7 @@ export default function Contact() {
               type="text"
               name="name"
               placeholder="Your Name"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-indigo-400"
+              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"
               required
             />
 
@@ -116,7 +116,7 @@ export default function Contact() {
               type="email"
               name="email"
               placeholder="Your Email"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-indigo-400"
+              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"
               required
             />
 
@@ -124,23 +124,23 @@ export default function Contact() {
               type="tel"
               name="phone"
               placeholder="Your Phone Number"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-indigo-400"
+              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"
               required
             />
 
             <textarea
               name="message"
               placeholder="Your Message"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-indigo-400"
+              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"
               rows="4"
               required
             ></textarea>
 
             <button
               type="submit"
-              className="px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:from-indigo-500 hover:to-blue-500 transition duration-200"
+              className="px-5 py-2 bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold rounded-lg shadow-md hover:from-yellow-500 hover:to-red-500 transition duration-200"
             >
-              Send Message
+              Send Message 🍔
             </button>
           </form>
         </motion.div>
@@ -150,13 +150,13 @@ export default function Contact() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.7, duration: 0.5 }}
-          className="mt-6 p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-md text-center border border-indigo-500"
+          className="mt-6 p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-md text-center border border-yellow-500"
         >
-          <h3 className="text-2xl font-bold text-indigo-400">
+          <h3 className="text-2xl font-bold text-yellow-400">
             Additional Information
           </h3>
           <p className="text-lg mt-3 font-semibold text-gray-300">
-            Reach out to us anytime for inquiries!
+            Reach out to us anytime for reservations, queries, or support!
           </p>
 
           {/* More Info Button */}
@@ -164,7 +164,7 @@ export default function Contact() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setShowDetails(!showDetails)}
-            className="mt-4 px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:from-indigo-500 hover:to-blue-500 transition duration-200 flex items-center mx-auto"
+            className="mt-4 px-5 py-2 bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold rounded-lg shadow-md hover:from-yellow-500 hover:to-red-500 transition duration-200 flex items-center mx-auto"
           >
             {showDetails ? "Less Info" : "More Info"}{" "}
             {showDetails ? (
@@ -184,10 +184,10 @@ export default function Contact() {
             >
               <p>
                 Feel free to contact us for reservations, queries, or support!
-                ✨
+                🍕✨
               </p>
               <p className="mt-2 font-semibold">
-                We are available 24/7 for your service.
+                We are available 24/7 to make your cravings come true.
               </p>
             </motion.div>
           )}
@@ -200,8 +200,8 @@ export default function Contact() {
           transition={{ delay: 0.9, duration: 0.5 }}
           className="mt-8 text-center"
         >
-          <p className="italic text-lg text-indigo-300">
-            "We're Here for You!" 📞
+          <p className="italic text-lg text-yellow-300">
+            "Serving you the best, with every bite!" 🍟
           </p>
         </motion.div>
       </motion.div>
