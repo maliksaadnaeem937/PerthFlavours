@@ -21,17 +21,7 @@ export default function Footer() {
         </nav>
 
         {/* Credit */}
-        <div className="text-center md:text-right text-sm">
-          <p className="text-[#B08968]">
-            Website developed by <span className="font-semibold text-white">Saad</span>
-          </p>
-          <p className="text-[#B08968]">
-            For inquiries, contact:{" "}
-            <a href="mailto:maliksaadnaem937@gmail.com" className="text-[#FFD700]">
-              maliksaadnaem937@gmail.com
-            </a>
-          </p>
-        </div>
+      
 
       </div>
     </footer>
