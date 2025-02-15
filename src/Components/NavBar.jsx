@@ -18,10 +18,8 @@ export default function NavBar() {
         <div className="flex w-full py-2 px-4 justify-between items-center">
           {/* Logo */}
           <NavLink to="." end>
-            <div className="flex items-center gap-2">
-              {/* You can replace this emoji with an image if you want */}
-              <span className="text-3xl">🍔</span>
-              
+            <div className="  max-w-[70px] max-h-[70px]">
+              <img src="/public/images/Logo.jpg" alt="" className=" rounded-full" />
             </div>
           </NavLink>
 
