@@ -97,12 +97,10 @@ export default function Contact() {
             className="mt-4 flex flex-col space-y-4"
             name="contact"
             method="POST"
-            data-netlify="true" // Enables Netlify form handling
-            data-netlify-honeypot="bot-field" // Adds a hidden honeypot field for bot protection
-            netlify
+            data-netlify="true"
+            
           >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="text" name="bot-field" className="hidden" />
+            
 
             <input
               type="text"
