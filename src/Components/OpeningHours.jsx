@@ -36,7 +36,7 @@ export default function OpeningHours() {
             <div className="flex flex-col items-center gap-2">
               <span className="text-3xl text-yellow-400">📍</span>
               <p className="text-sm sm:text-base break-words text-center">
-                Stirling Arcade, Stirling, FK8 1AX
+              Stirling Arcade, Stirling, Stirlingshire FK8 1AX
               </p>
             </div>
 

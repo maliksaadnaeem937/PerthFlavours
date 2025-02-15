@@ -49,7 +49,7 @@ export default function Contact() {
               <FaMapMarkerAlt className="text-yellow-400 text-4xl" />
               <p className="font-semibold text-yellow-400 mt-2">📍 Address:</p>
               <p className="text-gray-300 text-center">
-                Stirling Arcade, Stirling, FK8 1AX
+                Stirling Arcade, Stirling, Stirlingshire FK8 1AX
               </p>
             </div>
 
@@ -187,7 +187,7 @@ export default function Contact() {
                 🍕✨
               </p>
               <p className="mt-2 font-semibold">
-                We are available 24/7 to make your cravings come true.
+                We are here to make your cravings come true.
               </p>
             </motion.div>
           )}
