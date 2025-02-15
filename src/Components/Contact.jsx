@@ -59,7 +59,7 @@ export default function Contact() {
               <p className="font-semibold text-yellow-400 mt-2">📞 Phone:</p>
               <p className="text-gray-300 text-center">
                 <a
-                  href="tel:+441416113130"
+                  href="tel:01416113130"
                   className="text-blue-400 font-semibold hover:underline"
                 >
                   0141 611 3130
@@ -96,9 +96,7 @@ export default function Contact() {
           <form
             className="mt-4 flex flex-col space-y-4"
             name="contact"
-            method="POST"
-            data-netlify="true"
-            
+                   
           >
             
 

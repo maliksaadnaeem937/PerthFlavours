@@ -26,7 +26,7 @@ export default function CustomGoogleMap() {
             rel="noopener noreferrer"
             className="bg-[#FF8C42] text-white px-6 py-3 rounded-full text-lg font-semibold transition duration-300 hover:bg-[#FFD700]"
           >
-            Embark on Your Journey: Get Directions
+             Get Directions
           </a>
         </div>
       </div>

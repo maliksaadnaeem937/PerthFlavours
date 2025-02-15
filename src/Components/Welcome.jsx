@@ -25,7 +25,7 @@ export default function Welcome() {
 
         <h2 className="text-2xl sm:text-4xl font-semibold text-yellow-300 mb-5">
           <Typewriter
-            words={["The Tasty House"]}
+            words={["THE TASTY HOUSE"]}
             loop={false}
             cursor
             cursorStyle="|"

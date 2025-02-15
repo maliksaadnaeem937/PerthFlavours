@@ -14,12 +14,11 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="bg-gradient-to-r from-[#FF5722] to-[#FF9800] text-white shadow-lg fixed left-0 top-0 right-0 z-50 py-3">
+      <nav className="bg-gradient-to-r from-[#FF5722] to-[#FF9800] text-white shadow-lg fixed left-0 top-0 right-0 z-50 sm:py-2 py-1">
         <div className="flex w-full py-2 px-4 justify-between items-center">
-          {/* Logo */}
           <NavLink to="." end>
-            <div className="  max-w-[70px] max-h-[70px]">
-              <img src="/public/images/Logo.jpg" alt="" className=" rounded-full" />
+            <div className=" max-w-[50px] max-h-[50px] md:max-w-[70px] md:max-h-[70px]">
+              <img src="/images/Logo.jpg" alt="logo" className=" rounded-full" />
             </div>
           </NavLink>
 

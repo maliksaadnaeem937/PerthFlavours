@@ -43,7 +43,7 @@ export default function OpeningHours() {
             <div className="flex flex-col items-center gap-2">
               <span className="text-3xl text-yellow-400">📞</span>
               <a
-                href="tel:+441416113130"
+                href="tel:01416113130"
                 className="text-blue-400 font-semibold hover:underline text-sm sm:text-base"
               >
                 0141 611 3130
