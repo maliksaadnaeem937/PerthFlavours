@@ -70,7 +70,7 @@ export default function NavBar() {
                 `text-base ${isActive ? "font-bold underline" : ""} hover:underline transition-all duration-300 ease-in-out`
               }
             >
-              PRICING
+              MENU & PRICING
             </NavLink>
           </div>
 
@@ -140,7 +140,7 @@ export default function NavBar() {
               `text-lg ${isActive ? "font-bold underline" : ""} hover:underline transition-all duration-300 ease-in-out`
             }
           >
-            PRICING
+              MENU & PRICING
           </NavLink>
         </div>
       </nav>

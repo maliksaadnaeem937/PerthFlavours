@@ -70,7 +70,7 @@ export default function CustomerReviews() {
   };
 
   return (
-    <div className="max-w-[100%] bg-[#F4F4F4] py-12">
+    <div className="max-w-[100%] bg-[#1F1F1F]  py-12">
       <div className="max-w-6xl mx-auto px-6 py-10 bg-[#FF8C42] text-white rounded-lg shadow-xl">
         <h2 className="text-center text-3xl font-bold text-[#FFD700] mb-8">
           What Our Customers Say

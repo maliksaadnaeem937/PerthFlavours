@@ -13,7 +13,7 @@ export default function Welcome() {
       <div className="relative max-w-3xl bg-red-600 p-6 sm:p-8 rounded-lg shadow-lg">
         <h2 className="text-2xl sm:text-4xl font-semibold text-yellow-300 mb-3">
           <Typewriter
-            words={["Welcome to PERTH FLAVOURS"]}
+            words={["PERTH FLAVOURS"]}
             loop={false}
             cursor
             cursorStyle="|"

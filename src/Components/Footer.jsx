@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Brand & Copyright */}
         <div className="text-center md:text-left">
           <p className="text-sm md:text-base">
-            © {new Date().getFullYear()} <span className="font-semibold text-white">Perth Flavours</span>  
+            © {new Date().getFullYear()} <span className="font-semibold text-white">Perth Flavours</span>
           </p>
           <p className="text-xs text-[#B08968]">All Rights Reserved.</p>
         </div>
@@ -17,13 +17,19 @@ export default function Footer() {
         <nav className="flex flex-col md:flex-row gap-3 md:gap-6 text-sm">
           <Link to="/" className="hover:text-[#FFD700] transition duration-300">Privacy Policy</Link>
           <Link to="/" className="hover:text-[#FFD700] transition duration-300">Terms of Service</Link>
-          <Link to="/" className="hover:text-[#FFD700] transition duration-300">Contact</Link>
+          <Link to="/contact" className="hover:text-[#FFD700] transition duration-300">Contact</Link>
         </nav>
 
         {/* Credit */}
         <div className="text-center md:text-right text-sm">
           <p className="text-[#B08968]">
-            Powered by <span className="font-semibold text-white">ABC Website Builders</span>
+            Website developed by <span className="font-semibold text-white">Saad</span>
+          </p>
+          <p className="text-[#B08968]">
+            For inquiries, contact:{" "}
+            <a href="mailto:maliksaadnaem937@gmail.com" className="text-[#FFD700]">
+              maliksaadnaem937@gmail.com
+            </a>
           </p>
         </div>
 

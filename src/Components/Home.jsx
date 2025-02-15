@@ -4,6 +4,8 @@ import CustomerReviews from "./CustomerReviews";
 import GiftVouchers from "./GiftVouches";
 import Welcome from "./Welcome";
 import CustomGoogleMap from "./CustomGoogleMap";
+import TaglineSection from "./TagLine";
+import OwnerSection from "./Owner";
 export default function Home() {
   return (
     <main className="">
@@ -12,6 +14,8 @@ export default function Home() {
    {/* <div className="bg-[url('/public/images/home-first.jpeg')] h-[90vh] flex justify-center items-center">
    
    </div> */}
+   <TaglineSection></TaglineSection>
+   <OwnerSection></OwnerSection>
    <CustomerReviews></CustomerReviews>
    <GiftVouchers></GiftVouchers>
    <CustomGoogleMap></CustomGoogleMap>
