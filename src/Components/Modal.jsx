@@ -1,5 +1,6 @@
-export default function Modal({ isOpen, onClose }) {
-    if (!isOpen) return null;
+import { NavLink } from "react-router-dom";
+export default function Modal() {
+  
   
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
@@ -10,12 +11,13 @@ export default function Modal({ isOpen, onClose }) {
           <p className="text-gray-600 text-center mb-6">
             Thank you for reaching out! Our team will review your request and get back to you within 48 hours.
           </p>
-          <button
-            onClick={onClose}
+          <NavLink 
+           
             className="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200"
           >
-            Close
-          </button>
+            to={'/contact'}
+            Go Back
+          </NavLink>
         </div>
       </div>
     );

@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaChevronDown,
+  FaChevronUp,
+} from "react-icons/fa";
 
 export default function Contact() {
   const [showDetails, setShowDetails] = useState(false);
@@ -30,15 +36,21 @@ export default function Contact() {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="mt-6 p-6 bg-gray-900 bg-opacity-70 rounded-lg shadow-md "
         >
-          <h3 className="text-2xl font-semibold text-indigo-300 text-center">Get In Touch</h3>
-          <p className="text-gray-300 text-center">We are here to assist you!</p>
+          <h3 className="text-2xl font-semibold text-indigo-300 text-center">
+            Get In Touch
+          </h3>
+          <p className="text-gray-300 text-center">
+            We are here to assist you!
+          </p>
 
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Address Section */}
             <div className="flex flex-col items-center">
               <FaMapMarkerAlt className="text-indigo-400 text-4xl" />
               <p className="font-semibold text-indigo-400 mt-2">📍 Address:</p>
-              <p className="text-gray-300 text-center">Stirling Arcade, Stirling, FK8 1AX</p>
+              <p className="text-gray-300 text-center">
+                Stirling Arcade, Stirling, FK8 1AX
+              </p>
             </div>
 
             {/* Phone Section */}
@@ -46,7 +58,10 @@ export default function Contact() {
               <FaPhone className="text-indigo-400 text-4xl" />
               <p className="font-semibold text-indigo-400 mt-2">📞 Phone:</p>
               <p className="text-gray-300 text-center">
-                <a href="tel:+441416113130" className="text-blue-400 font-semibold hover:underline">
+                <a
+                  href="tel:+441416113130"
+                  className="text-blue-400 font-semibold hover:underline"
+                >
                   0141 611 3130
                 </a>
               </p>
@@ -57,7 +72,10 @@ export default function Contact() {
               <FaEnvelope className="text-indigo-400 text-4xl" />
               <p className="font-semibold text-indigo-400 mt-2">📧 Email:</p>
               <p className="text-gray-300 text-center">
-                <a href="mailto:clearbusinessbyadrian@gmail.com" className="text-blue-400 font-semibold hover:underline">
+                <a
+                  href="mailto:clearbusinessbyadrian@gmail.com"
+                  className="text-blue-400 font-semibold hover:underline"
+                >
                   clearbusinessbyadrian@gmail.com
                 </a>
               </p>
@@ -72,8 +90,19 @@ export default function Contact() {
           transition={{ delay: 0.6, duration: 0.5 }}
           className="mt-6 p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-md border border-indigo-500"
         >
-          <h3 className="text-2xl font-semibold text-indigo-300 text-center">Send Us a Message</h3>
-          <form className="mt-4 flex flex-col space-y-4">
+          <h3 className="text-2xl font-semibold text-indigo-300 text-center">
+            Send Us a Message
+          </h3>
+          <form
+            className="mt-4 flex flex-col space-y-4"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit="submit"
+            action="/success/"
+          >
+            <input type="text" className="hidden" name="bot-field" />
             <input
               type="text"
               placeholder="Your Name"
@@ -114,7 +143,9 @@ export default function Contact() {
           transition={{ delay: 0.7, duration: 0.5 }}
           className="mt-6 p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-md text-center border border-indigo-500"
         >
-          <h3 className="text-2xl font-bold text-indigo-400">Additional Information</h3>
+          <h3 className="text-2xl font-bold text-indigo-400">
+            Additional Information
+          </h3>
           <p className="text-lg mt-3 font-semibold text-gray-300">
             Reach out to us anytime for inquiries!
           </p>
@@ -126,7 +157,12 @@ export default function Contact() {
             onClick={() => setShowDetails(!showDetails)}
             className="mt-4 px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-md hover:from-indigo-500 hover:to-blue-500 transition duration-200 flex items-center mx-auto"
           >
-            {showDetails ? "Less Info" : "More Info"} {showDetails ? <FaChevronUp className="ml-2" /> : <FaChevronDown className="ml-2" />}
+            {showDetails ? "Less Info" : "More Info"}{" "}
+            {showDetails ? (
+              <FaChevronUp className="ml-2" />
+            ) : (
+              <FaChevronDown className="ml-2" />
+            )}
           </motion.button>
 
           {/* Additional Details on Click */}
@@ -137,8 +173,13 @@ export default function Contact() {
               transition={{ duration: 0.5 }}
               className="mt-4 text-gray-300 bg-gray-800 p-4 rounded-lg shadow-md"
             >
-              <p>Feel free to contact us for reservations, queries, or support! ✨</p>
-              <p className="mt-2 font-semibold">We are available 24/7 for your service.</p>
+              <p>
+                Feel free to contact us for reservations, queries, or support!
+                ✨
+              </p>
+              <p className="mt-2 font-semibold">
+                We are available 24/7 for your service.
+              </p>
             </motion.div>
           )}
         </motion.div>
@@ -150,7 +191,9 @@ export default function Contact() {
           transition={{ delay: 0.9, duration: 0.5 }}
           className="mt-8 text-center"
         >
-          <p className="italic text-lg text-indigo-300">"We're Here for You!" 📞</p>
+          <p className="italic text-lg text-indigo-300">
+            "We're Here for You!" 📞
+          </p>
         </motion.div>
       </motion.div>
     </div>
