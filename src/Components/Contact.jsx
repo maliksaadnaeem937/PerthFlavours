@@ -100,7 +100,7 @@ export default function Contact() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit="submit"
-            action="/success/"
+            action="/success"
           >
             <input type="text" className="hidden" name="bot-field" />
             <input
