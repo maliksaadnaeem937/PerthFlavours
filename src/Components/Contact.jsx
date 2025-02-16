@@ -52,7 +52,7 @@ export default function Contact() {
     };
 
     try {
-         const response = await emailjs.send(
+      const response = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
@@ -148,20 +148,12 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        {/* Contact Form */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="mt-6 p-6 bg-gray-900 bg-opacity-80 rounded-lg shadow-md border border-yellow-500"
-        >
-          <h3 className="text-2xl font-semibold text-yellow-300 text-center">
-            Send Us a Message 🍟
-          </h3>
-          {/* // place form here    */}
+        {/* // place form here    */}
 
-          <ContactForm handleSubmit={handleSubmit}></ContactForm>
-        </motion.div>
+        <ContactForm
+          handleSubmit={handleSubmit}
+          heading={" Send Us a Message 🍟"}
+        ></ContactForm>
 
         {/* More Info Section */}
         <motion.div
