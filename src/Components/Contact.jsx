@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Loader from "./Loader";
+import emailjs from "emailjs-com";
+import Modal from "./Modal";
 import {
   FaPhone,
   FaEnvelope,
@@ -7,9 +10,71 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
-
+import ContactForm from "./ContactForm";
 export default function Contact() {
   const [showDetails, setShowDetails] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState({ title: "", body: "" });
+
+  // function customPromise(success) {
+  //   return new Promise((resolve, reject) => {
+
+  //       setTimeout(() => {
+  //         if (success) {
+  //           resolve("✅ Promise resolved successfully!");
+  //         } else {
+  //           reject("❌ Promise rejected!");
+  //         }
+  //       }, 2000);
+
+  //   });
+  // }
+
+  const removeModal = () => {
+    setModalOpen(false);
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const message = formData.get("message");
+
+    const templateParams = {
+      to_name: "Mr. Adrian Venoin",
+      from_name: name,
+      from_email: email,
+      from_phone: phone,
+      message: message,
+    };
+
+    try {
+         const response = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setModalMessage({
+        title: "Thank You!",
+        body: "Your message has been sent successfully. We will get back to you shortly.",
+      });
+    } catch (error) {
+      setModalMessage({
+        title: "Error!",
+        body: `There was an error sending your message. Please try again later.\nError: ${error.text}`,
+      });
+    } finally {
+      setIsLoading(false);
+      setModalOpen(true);
+    }
+
+    e.target.reset();
+  };
 
   return (
     <div className="min-h-screen flex p-2 items-center justify-center bg-gradient-to-br from-yellow-400 via-red-500 to-pink-600 sm:p-6">
@@ -93,52 +158,9 @@ export default function Contact() {
           <h3 className="text-2xl font-semibold text-yellow-300 text-center">
             Send Us a Message 🍟
           </h3>
-          <form
-            className="mt-4 flex flex-col space-y-4"
-            name="contact"
-                   
-          >
-            
+          {/* // place form here    */}
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"
-              required
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"
-              required
-            />
-
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Your Phone Number"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"
-              required
-            />
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-yellow-400"
-              rows="4"
-              required
-            ></textarea>
-
-            <button
-              type="submit"
-              className="px-5 py-2 bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold rounded-lg shadow-md hover:from-yellow-500 hover:to-red-500 transition duration-200"
-            >
-              Send Message 🍔
-            </button>
-          </form>
+          <ContactForm handleSubmit={handleSubmit}></ContactForm>
         </motion.div>
 
         {/* More Info Section */}
@@ -201,6 +223,10 @@ export default function Contact() {
           </p>
         </motion.div>
       </motion.div>
+      {isLoading && <Loader></Loader>}
+      {modalOpen && (
+        <Modal message={modalMessage} removeModal={removeModal}></Modal>
+      )}
     </div>
   );
 }
