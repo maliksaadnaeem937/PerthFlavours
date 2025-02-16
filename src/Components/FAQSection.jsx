@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "How can I contact you?",
     answer:
-      "You can reach us through the contact form on our website or email us at support@thetastyhouse.com.",
+      "You can reach us through the contact form on our website or email us at clearbusinessbyadrian@gmail.com.",
   },
   {
     question: "How long does it take to get a response?",
